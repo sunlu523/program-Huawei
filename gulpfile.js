@@ -24,7 +24,7 @@ gulp.task("server",done =>{
 
 gulp.task("copyImg", done =>{
     gulp.src("RES/img/**")
-        .pipe(gulp.dest("dist/img"))
+        .pipe(gulp.dest("dist/img"));
     done();
 })
 
@@ -37,10 +37,26 @@ gulp.task("html",done =>{
     done();
 })
 
+gulp.task("js",done =>{
+    gulp.src("RES/js/**")
+        .pipe(gulp.dest("dist/js"));
+    done();
+})
+
+gulp.task("font",done =>{
+    gulp.src("RES/font_khryhaqhs5i/**")
+        .pipe(gulp.dest("dist/font_khryhaqhs5i"));
+    done();
+})
+
+
+
 gulp.task("watch",done =>{
     gulp.watch("RES/*.html",gulp.series("html"));
     gulp.watch("RES/sass/*.scss",gulp.series("sass"));
     gulp.watch("RES/img/**",gulp.series("copyImg"));
+    gulp.watch("RES/js/**",gulp.series("js"));
+    gulp.watch("RES/js/font_khryhaqhs5i",gulp.series("font"));
     done();
 })
 
