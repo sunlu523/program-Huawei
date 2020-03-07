@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.an{
+    width: 1200px;
+    margin: 0 auto;
+}
+li{
+    list-style:none;
+    float: left;
+}
+a{
+    color: #afafaf;
+    text-decoration: none;
+}
+header{
+    position: relative;
+    height: 89px;
+    overflow: hidden;   
+}
+header img{
+    position: absolute;
+    left: 50%;
+    margin-left: -960px;
+    width: 1920px;
+    height: 89px;
+
+}
+
+/* ----------------------------导航栏部分----------------------------- */
+.nav {
+    height: 36px; 
+}
+.navs {
+    height: 36px;
+}
+/* ------------------------------左导航栏---------------------------- */
+.nav-1{
+    float: left;
+}
+.nav-1 ul li{
+    position: relative;
+
+}
+.nav-1 ul li a{
+    color: #afafaf;
+    font-size: 12px;
+    font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+    height: 36px;
+    line-height: 36px;
+}
+.nav ul li span{
+    margin: 0 4px 0 6px;
+}
+.nav ul li .bian{
+    position:absolute;
+    top: 4px;
+}
+.nav-1 ul li .second{
+    display: none;
+    width: 120px;
+    height: 146px;
+    background-color: white;
+    border-radius: 0 0 5px 5px;
+}
+.nav ul li a:hover{
+    color: white;
+}
+.nav-1 ul  .bianbian{
+    height: 36px;
+    width: 85px;
+}
+.nav-1 ul  .bianbian:hover {
+    background-color: white;   
+}
+.nav-1 ul  .bianbian:hover a{
+    color: red;
+}
+// /* ------------------------------------右导航栏---------------------------------------- */
+.nav-2{
+    float: right;
+}
+
+.nav-2 ul li a{
+    color: #afafaf;
+    font-size: 12px;
+    font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+    height: 36px;
+    line-height: 36px;
+}
+.nav-2 ul .signIn{
+    margin-right: 18px;
+}
+.nav-2 ul li p{
+    float: right;
+}
+.nav-2 ul li span{
+    float: right;
+    margin: 6px 4px 0 6px;
+
+}
+.nav-2 ul li p img{
+   
+    display: block;
+    float: right;
+}
