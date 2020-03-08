@@ -566,16 +566,41 @@ nav{
 
 .rexiao{
     .danpin{
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
+        // display: flex;
+        // justify-content: space-between;
+        // flex-direction: row;
+        
         margin-top: 38px;
         p{
             font-size: 25px;
             font-weight: bold;
             margin-bottom: 10px;
-
         }
+        ul{
+            column-count: 5;
+            column-gap: 13px;
+            background-color: #f9f9f9;
+            width: 228px;
+            height: 288px;
+            li:nth-of-type(1){
+                background-color: none;
+                img{
+                    width: 230px;
+                    height: 592px;
+                }
+               
+            }
+            li{
+                img{
+                    width: 118px;
+                    height: 142px;
+                    display: block;
+                    
+                }
+               
+            }
+        }
+       
     }
 }
 
