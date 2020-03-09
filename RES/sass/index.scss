@@ -2,8 +2,35 @@
     margin: 0;
     padding: 0;
 }
-body{
-    height: 10000px;
+.grid-title{
+    margin-top: 12px;
+    width: 210px;
+    height: 21px;
+    line-height: 21px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 14px;
+    font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;;
+} 
+.grid-desc{
+    margin-top: 2px;
+    margin-bottom: 7px;
+    font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;;
+    color: #777;
+    width: 230px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: normal;
+}
+.grid-price{
+    color: #d0021b;
+    width: 230px;
+    text-align: center;
+    font-weight: normal;
+    font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;;
+    font-size: 14px;
 }
 .an{
     width: 1200px;
@@ -20,9 +47,7 @@ img{
 a{
     color: #afafaf;
     text-decoration: none;
-    &:hover{
-        color: white;
-    }
+    font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
 }
 header{
     position: relative;
@@ -60,7 +85,7 @@ header{
 }
 
 
-/* ------------------------------左导航栏---------------------------- */
+/* ----------------------------------------------左导航栏---------------------------- */
 .nav-1{
     float: left;
     ul {
@@ -73,6 +98,9 @@ header{
             &:hover a{
                 color: #ca141d;
             }
+            &:hover i{
+                color: #ca141d;
+            }
         }
         li{
             position: relative;
@@ -82,6 +110,17 @@ header{
                 font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
                 height: 36px;
                 line-height: 36px;
+                .bian{
+                position:absolute;
+                top: 1px;
+                left: 64px;
+                i{
+                    display: block;
+                    color:#afafaf;
+                    padding-left: 3px;
+                    margin-top: -2px;
+                }
+            }
                 
             }
             span{
@@ -91,11 +130,6 @@ header{
                 img{
                      margin: 14px 8px 0 8px;
                 }
-            }
-            .bian{
-                position:absolute;
-                top: 1px;
-                left: 64px;
             }
             .second{
                 display: none;
@@ -109,7 +143,7 @@ header{
    }
 }
 
-// /* ------------------------------------右导航栏---------------------------------------- */
+// /* ------------------------------------------右导航栏---------------------------------------- */
 .nav-2{
     float: right;
     ul li{  
@@ -126,22 +160,28 @@ header{
             float: right;
             display: block;
             height: 36px;
-            line-height: 36px;            
-            img{
-                margin-top: 14px;
-                margin-left: 8px;
-            }
+            line-height: 36px;         
         }
         span:nth-of-type(1){
             float: right;
             margin: 14px 5px 0 8px;  
+
+        }
+        .sunlu{
+            margin-top: 13px !important;  
+            i{
+                margin-top: -4px;
+                display: block;
+                float: left;
+                height: 18.4px;
+                padding-left: 0 !important;
+            } 
         }
         i{
             float: left;
             color: #afafaf;
             height: 36px;
-            line-height: 36px;
-            margin: 0 10px;
+            padding-left: 3px;
         }
     } 
     ul .signIn{
@@ -150,6 +190,7 @@ header{
     ul .shop{
         width: 96px;
         height: 36px;
+        text-align: center;
         background-color: #424242;
         &:hover {
             background-color: white;   
@@ -159,6 +200,13 @@ header{
         }
         &:hover i{
             color: #ca141d;
+        }
+        i{
+            float: left;
+            color: #afafaf;
+            height: 36px;
+            padding-left: 10px;
+            padding-right: 5px;
         }
     }
 }
@@ -548,7 +596,7 @@ nav{
         }
     }
 }
-
+// --------------------------------------------图片广告--------------------------------------------------------------
 .adpicture{
     .adpicture1{
         height: 200px;
@@ -563,44 +611,400 @@ nav{
         }
     }
 }
-
+// --------------------------------------------热销单品--------------------------------------------------------------
 .rexiao{
     .danpin{
-        // display: flex;
-        // justify-content: space-between;
-        // flex-direction: row;
-        
         margin-top: 38px;
-        p{
+        .main-title{
             font-size: 25px;
-            font-weight: bold;
             margin-bottom: 10px;
         }
         ul{
-            column-count: 5;
-            column-gap: 13px;
-            background-color: #f9f9f9;
-            width: 228px;
-            height: 288px;
+            column-count:5;
+            column-gap: 13px;          
+            li{
+                background-color: #f9f9f9;
+                width: 230px;
+                height: 290px;
+                border-radius: 10px;
+                margin-bottom: 10px;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                img{
+                    width: 150px;
+                    height: 150px;
+                    display: block;       
+                }
+                
+            }
             li:nth-of-type(1){
                 background-color: none;
+                width: 230px;
+                height: 592px;
                 img{
                     width: 230px;
                     height: 592px;
-                }
-               
-            }
-            li{
-                img{
-                    width: 118px;
-                    height: 142px;
-                    display: block;
-                    
-                }
-               
+                    border-radius: 10px;
+
+                }  
             }
         }
        
     }
 }
+// --------------------------------------------精品推荐--------------------------------------------------------------
+.jingpin{
+    .tuijian{
+        margin-top: 38px;
+        .main-title{
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+        .a-banner{
+            column-count: 5;
+            column-gap: 10px;
+            a{
+                display: block;
+                float: left;
+                width: 230px;
+                height: 295px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .grid-info{
+                    border-radius: 10px;
+                    background: #f3f3f3;
+                    width: 230px;
+                    height: 241px;
+                    i{
+                        display: block;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width:230px;
+                        height: 205px;
+                        img{
+                            width: 150px;
+                            height: 150px;       
+                        }
+                    }
+                    .grid-desc{
+                        background-color: #cccccc;
+                        height: 36px;
+                        line-height: 36px;
+                        font-size: 14px;
+                        border-radius: 0 0 10px 10px;
+                        margin: 0;
+                    }
+                }
+                .grid-title{
+                    width: 230px;
+                    height: 24px;
+                    color: black;
+                    margin: 9px 6px 0;
+                }
+            }
+        }
+    }
+}
 
+// --------------------------------------------小banner图------------------------------------------------------------
+.s-banner{
+    margin-top: 35px;
+    .sliderBox{
+        width: 1200px;
+        height: 120px;
+        .sliderList{
+            li{  
+                width: 1200px;
+                height: 120px;
+                a{
+                    width: 1200px;
+                    height:120px;
+                    img{
+                        width: 1200px;
+                        margin-left: -600px;
+                        height: 120px;
+                        border-radius: 10px;
+                    }
+                }         
+            }
+        }
+        .numList{
+            bottom: 10px;
+            right: 8px;
+            margin: 0 2px;
+        }
+    }  
+}
+
+// --------------------------------------------手机------------------------------------------------------------------
+.phone{
+
+    .phone-head{
+        height: 80px;
+        .main-title{
+            font-size: 25px;     
+            float: left;
+            margin: 34px 25px 10px 0;
+        }
+        .phone-list{
+            float: left;
+            margin-top: 36px;
+            height: 33px;
+            li{
+                a{
+                    font-size: 14px;
+                    color: #999;
+                    margin-left: 0;
+                    margin-right: 24px;
+                    line-height: 33px;
+                }
+            }
+        }
+        .more{
+            float: right;
+            height: 33px;
+            font-size: 14px;
+            color: #333;
+            line-height: 33px;
+            margin-top: 36px;
+            &:hover{
+                color: #cb242b;;
+            }
+        }
+    }
+    .phone-middle{
+        column-count:5;
+        column-gap: 13px;
+        // column-span: 1/all; 
+        margin-top: 16px; 
+        // display: flex;
+        // justify-content:space-between;
+    
+        li{
+            background-color: #f9f9f9;
+            width: 230px;
+            height: 290px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            img{
+                width: 150px;
+                height: 150px;
+                display: block;       
+            }         
+        }
+    }
+}
+
+// --------------------------------------------笔记本----------------------------------------------------------------
+
+// --------------------------------------------精品平板--------------------------------------------------------------
+
+// --------------------------------------------智能穿戴--------------------------------------------------------------
+.watch{
+    .phone{
+        .watch-middle{
+            // column-count:4;
+            // column-gap: 13px;
+            // column-span: 1/all; 
+            margin-top: 16px; 
+            // display: flex;
+            // justify-content:space-between;
+            height: 605px;
+        
+            li{
+                background-color: #f9f9f9;
+                width: 230px;
+                height: 290px;
+                border-radius: 10px;
+                margin-bottom: 10px;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                margin-right: 12px;
+                img{
+                    width: 150px;
+                    height: 150px;
+                    display: block;       
+                }         
+            }
+            li:nth-child(4){
+                margin-right: 0;
+            }
+            li:last-child{
+                margin-right: 0;
+
+            }
+        }
+        .a-banner{
+            column-count: 5;
+            column-gap: 10px;
+            height:295px;
+            a{
+                display: block;
+                float: left;
+                width: 230px;
+                height: 295px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .grid-info{
+                    border-radius: 10px;
+                    background: #f3f3f3;
+                    width: 230px;
+                    height: 241px;
+                    i{
+                        display: block;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width:230px;
+                        height: 205px;
+                        img{
+                            width: 150px;
+                            height: 150px;       
+                        }
+                    }
+                    .grid-desc{
+                        background-color: #cccccc;
+                        height: 36px;
+                        line-height: 36px;
+                        font-size: 14px;
+                        border-radius: 0 0 10px 10px;
+                        margin: 0;
+                    }
+                }
+                .grid-title{
+                    width: 230px;
+                    height: 24px;
+                    color: black;
+                    margin: 9px 6px 0;
+                }
+            }
+        }
+    }
+}
+
+// --------------------------------------------新人见面礼------------------------------------------------------------
+.gift{
+    display:block;
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 35px;
+    img{
+        width: 1200px;
+        height: 200px;
+        border-radius: 10px;
+    }
+}
+// --------------------------------------------bottom---------------------------------------------------------------
+.bottom{
+        height: 507px;
+        background-color: #f9f9f9;
+        margin-top: 70px;
+    .bottom1{
+        height: 82px;
+        border-bottom: 1px solid #e9e9e9;
+        .slogan{
+            height: 40px;
+            width: 1200px;
+            text-align: center;
+            padding-top: 25px;
+            line-height: 40px;
+            li{
+                float: left;
+                margin-right:120px; 
+                height: 40px;
+                a{
+                    img{
+                        float: left;
+                        width: 40px;
+                        height: 40px;
+                        margin-right: 15px;
+                        // margin-top: 20px;
+                    }
+                    span{
+                        display: block;
+                        float: left;
+                        font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;;
+                        font-size: 18px;
+                        color: black;
+                    }
+                }
+            }
+            li:nth-of-type(4){
+                margin-right: 0;
+            }
+        }
+
+    }
+    .bottom2{
+        height: 185px;
+        line-height: 211px;
+        border-bottom: 1px solid #e9e9e9;
+        .bottom2-1{
+            float: left;
+            width:921px;
+            height: 160px;
+            margin-top: 26px;
+            border-right: 1px solid #e9e9e9;
+            .service{
+                font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;;
+                height: 160px;
+                padding-top: 35px;
+                li:nth-of-type(1){
+                    // height: 27px;
+                    font-size: 14px;
+                    padding-bottom: 7px;
+                    color: #333;
+                }
+                li{
+                    // height: 15px;
+                    float: none;
+                    a{
+                        color: #777;
+                    }     
+                }
+            }
+        }
+        .bottom2-2{
+            float: left;
+            width: 278px;
+            height: 211px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p{
+                width: 279px;
+                height: 36px;
+                font-size:24px;
+                font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+
+
+            }
+        }
+    }
+}
+
+// ----------------------------------------------aside------------------------------------------
+.aside1{
+    overflow: hidden;
+    position: absolute;
+    top: 704px;
+    left: -203px;
+}
+.aside2{
+    position: absolute;
+    top: 704px;
+    right: -203px;
+}
