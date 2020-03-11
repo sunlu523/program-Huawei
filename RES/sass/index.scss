@@ -2,6 +2,13 @@
     margin: 0;
     padding: 0;
 }
+body{
+    width:100%;
+    display:fixed; 
+    height:100%; 
+    overflow-y:scroll; 
+    overflow-x:hidden;
+}
 .grid-title{
     margin-top: 12px;
     width: 210px;
@@ -110,6 +117,9 @@ header{
                 font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
                 height: 36px;
                 line-height: 36px;
+                &:hover{
+                    color: white;
+                }
                 .bian{
                 position:absolute;
                 top: 1px;
@@ -155,6 +165,9 @@ header{
         line-height: 36px;
         display:block;
         float: left;
+        &:hover{
+            color: white;
+        }
         }
         span:nth-of-type(2) {
             float: right;
@@ -321,30 +334,30 @@ nav{
 // ----------------------------------------------banner-------------------------------------------------
 .sliderBox{
     position: relative;
-    width: 1520px;
+    // width: 1520px;
     height: 550px;
     overflow: hidden;
     .sliderList{
         position: absolute;
         li{
-          
+            margin: 0 auto;
             position: absolute;
             opacity:0;
-            width: 1520px;
+            // width: 1520px;
             height: 550px;
             &:first-child{
                 opacity:1;
             }
             a{
-                width: 1520px;
+                // width: 1520px;
                 height: 550px;
                 img{
                     position: absolute;
-                    width: 1920px;
+                    // width: 1920px;
                     left: 50%;
-                    margin-left: -960px;
+                    // margin-left: -960px;
                     height: 550px;
-                    border-radius: 0 0 400px 400px;
+                    border-radius: 0 0 300px 300px;
                 }
             }
             
@@ -599,15 +612,31 @@ nav{
 // --------------------------------------------图片广告--------------------------------------------------------------
 .adpicture{
     .adpicture1{
+        position: relative;
         height: 200px;
         display: flex;
         justify-content: space-between;
         flex-direction: row;
         margin-top: 60px;
-        img{
-            height: 200px;
-            width: 290px;
-            border-radius: 10px;;
+        .yu{
+            img{
+                height: 200px;
+                width: 290px;
+                border-radius: 10px;;
+            }
+        }
+        // ----------------------------------------------aside------------------------------------------
+        .aside1{
+            overflow: hidden;
+            position: absolute;
+            top: -108px;
+            left: -363px;
+
+        }
+        .aside2{
+            position: absolute;
+            top: -108px;
+            right: -363px;
         }
     }
 }
@@ -909,7 +938,7 @@ nav{
 }
 // --------------------------------------------bottom---------------------------------------------------------------
 .bottom{
-        height: 507px;
+        height: 420px;
         background-color: #f9f9f9;
         margin-top: 70px;
     .bottom1{
@@ -948,31 +977,33 @@ nav{
         }
 
     }
+
     .bottom2{
-        height: 185px;
-        line-height: 211px;
+        height: 211px;
+        display: flex;
+        align-items: center;
         border-bottom: 1px solid #e9e9e9;
         .bottom2-1{
-            float: left;
-            width:921px;
-            height: 160px;
-            margin-top: 26px;
-            border-right: 1px solid #e9e9e9;
+           float: left;
+           height: 155px;
+           width: 920px;
+           border-right: 1px solid #e9e9e9;
             .service{
-                font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;;
-                height: 160px;
-                padding-top: 35px;
-                li:nth-of-type(1){
-                    // height: 27px;
-                    font-size: 14px;
-                    padding-bottom: 7px;
-                    color: #333;
-                }
+                width: 16.66667%;
+                float: left;
                 li{
-                    // height: 15px;
+                    p{
+                        font-size: 14px;
+                        padding-bottom: 7px;
+                        color: #333;
+                    }
                     float: none;
                     a{
                         color: #777;
+                        font-size: 12px;
+                        &:hover{
+                            color: #ca141d;
+                        }
                     }     
                 }
             }
@@ -984,27 +1015,135 @@ nav{
             display: flex;
             justify-content: center;
             align-items: center;
-            p{
+            flex-direction: column;
+            .num{
                 width: 279px;
                 height: 36px;
                 font-size:24px;
+                padding-left: 185px;
                 font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
-
-
+            }
+            .promise{
+                font-size: 14px;
+                font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+            }
+            .kefu{
+                width: 170px;
+                height: 34px;
+                margin-top: 10px;
+                font-size: 14px;
+                line-height: 34px;
+                background: #333;
+                cursor: pointer;
+                border-radius: 17px;
+                &:hover{
+                    background: #777;
+                }
+                a{
+                    color: white;
+                     i{
+                         float: left;
+                        font-size: 22px;
+                        padding-left: 45px;
+                    }
+                    span{
+                        float: left;     
+                    }
+                }   
+            }
+            .Vmall{
+                margin-top: 15px;
+                p{
+                    font-size: 14px;
+                    color: #333;
+                    float: left;
+                }
+                a{
+                    width: 24px;
+                    height: 24px;
+                    float: left;
+                    background: url(../img/weixin.gif) no-repeat;
+                    margin-right: 5px;
+                }
+                .toutiao{
+                    background: url(../img/toutiao.gif) no-repeat center;
+                }
+                .weibo{
+                    background: url(../img/weibo.gif) no-repeat;
+                }
+                .hua{
+                    background: url(../img/hua.gif) no-repeat;
+                }
             }
         }
     }
-}
-
-// ----------------------------------------------aside------------------------------------------
-.aside1{
-    overflow: hidden;
-    position: absolute;
-    top: 704px;
-    left: -203px;
-}
-.aside2{
-    position: absolute;
-    top: 704px;
-    right: -203px;
+    .footer{
+        height: 114px;
+        display: flex;
+        align-items: center;
+        .footer1{
+            height: 61px;
+            float: left;
+            .footer-logo{
+                float: left;
+                padding: 3px 20px 0 0;
+                img{
+                    width: 82px;
+                    height: 20px;
+                }
+            }
+            .dl{
+                height: 61px;
+                float: left;
+                .footer-link{
+                    height: 12px;
+                    margin-top: 3px;
+                    margin-bottom: 6px;
+                    li{
+                        height: 12px;
+                        float: left;
+                        line-height: 1;
+                        padding-right: 6px;
+                        border-right: 1px solid #d3d3d3;
+                        margin-right: 6px;
+                        a{
+                            color: #777;
+                            font-size: 12px;
+                            display: block;
+                            &:hover{
+                                color: #ca141d;
+                            }
+                        }
+                    }
+                }
+                .footer-shengming{
+                    
+                    a{
+                        font-size: 12px;
+                        color: #a4a4a4;
+                        &:hover{
+                            color: #ca141d;
+                        }
+                    }
+                    span{
+                        font-size: 12px;
+                        color: #a4a4a4;
+                    }
+                }
+            }
+        }
+        .zhizhao{
+            float: left;
+            margin-left: 290px;
+            margin-top: -30px;
+            width: 70px;
+            height: 24px;
+            a{
+                img{
+                    width: 70px;
+                    height: 24px;
+                }
+            }
+        }
+    }
 }
