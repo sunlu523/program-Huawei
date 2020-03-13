@@ -180,7 +180,7 @@ header{
             margin: 14px 5px 0 8px;  
 
         }
-        .sunlu{
+        .sunlu111{
             margin-top: 13px !important;  
             i{
                 margin-top: -4px;
@@ -197,7 +197,7 @@ header{
             padding-left: 3px;
         }
     } 
-    ul .signIn{
+    ul #signIn_1{
         margin-right: 18px;
     }
     ul .shop{
@@ -338,6 +338,7 @@ nav{
     height: 550px;
     overflow: hidden;
     .sliderList{
+        z-index: -1;
         position: absolute;
         li{
             margin: 0 auto;
@@ -381,16 +382,16 @@ nav{
             font-weight: lighter;
        }
        span:first-child{
-        left: 373px;
+        left: 566px;
        }
        span:last-child{
-            right:155px;
+            right:347px;
        }
     }
     .numList{
         position: absolute;
-        bottom: 90px;
-        right:155px;
+        bottom: 63px;
+        right:348px;
         li{
             float: left;
             width: 10px;
@@ -409,48 +410,6 @@ nav{
             background-color:white;
         }
     }
-    .banner1{
-        ul{
-            position: relative;
-            width: 200px;
-            height: 440px;
-            background:white;
-            opacity: .9;
-            border-radius: 10px;
-            margin-top: 18px;
-            display: flex;
-            flex-direction: column;
-            color:#848484;
-            li{
-                font-size: 16px;
-                font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;;
-                padding-left: 15px;
-                height: 44px;
-                line-height: 44px;
-                cursor: pointer;
-
-                &:hover{
-                    background-color: rgba(243, 236, 236, 0.884);
-                }
-                a{
-                    float: left;
-                    display: block;
-                    &:hover{
-                        color:#b7bbbc;
-                    }
-                }
-                span{
-                    display: block;
-                    float:right;
-                    margin-right: 15px;
-                    color:#b7bbbc;
-                }
-            }
-
-        }
-
-    }
-    
 }
 .banner{
     .banner-1{
@@ -1147,3 +1106,91 @@ nav{
         }
     }
 }
+
+// -------------------------------------------回到顶部---------------------------------------------------------------
+.toTop{
+    width: 38px;
+    position: fixed;
+    right: 6px;
+    bottom: 20px;
+    height: 158px;
+    z-index: 500;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    a{
+        width: 30px;
+        height: 40px;
+        display: block;
+        position: relative;
+        &:hover i{
+            display: block;
+        }
+        i{
+            padding-top: 7px;
+            position: absolute;
+            display: none;
+            width: 76px;
+            height:23px;
+            text-align: center;
+            color: #777;
+            background: #fff;
+            border-radius: 2px;
+            box-shadow: 0 2px 36px 0 rgba(0,0,0,0.07);
+            right: 46px;
+            top: 0;
+            font-style: normal;
+            font: 12px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+        }
+    }
+    .backTop{
+            display: none;
+            opacity: 0;
+    }
+}
+
+// ------------------------------------------楼梯--------------------------------------------------------------------
+#floorNav{
+    // display: none;
+
+    position: fixed;
+    top: 206.6px;
+    right: 0;
+    width: 100px;
+    height: 376px;
+}
+#floorNav li{
+    float: right;
+    text-align: right;
+    padding-right: 7px;
+    line-height: 18px;
+    position: relative;
+    display: block;
+    padding: 10px 12px 10px 0;
+    border-bottom: 1px solid transparent;
+    font-size: 12px;
+    a{
+        color: #999;
+        transition: all .5s ease;
+        padding-right: 4px;
+    }
+}
+
+#floorNav span{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    background: red;
+    color: white;
+}
+
+#floorNav li:hover,#floorNav li.hover{
+    display: block;
+    color: black;
+}
+
