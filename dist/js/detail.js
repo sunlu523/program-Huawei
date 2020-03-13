@@ -17,16 +17,16 @@ $(function(){
             console.log(123);
             loadData(data);
         })
-        $("#tianjia").click(function() {
-            $.get("http://jx.xuzhixiang.top/ap/api/add-product.php", {
-              uid: data.uid,
-              pid: data.pid,
-              pnum: 1
-            }).then(data => {
-              console.log(data);
-              location.href = "cart.html";
-            });
-          });
+        // $("#tianjia").click(function() {
+        //     $.get("http://jx.xuzhixiang.top/ap/api/add-product.php", {
+        //       uid: data.uid,
+        //       pid: data.pid,
+        //       pnum: 1
+        //     }).then(data => {
+        //       console.log(data);
+        //       location.href = "cart.html";
+        //     });
+        //   });
 })
     
     function loadData(data){
@@ -34,3 +34,18 @@ $(function(){
         $("#for-price").html(`<span>￥&nbsp;${data.pprice}</span>`)
     }
 
+    var uidNum = JSON.parse(localStorage.getItem("uid"));
+    var uiduid = uidNum.uid
+    console.log(uiduid)
+    $("#tianjia").click(function(){
+        $.get("http://jx.xuzhixiang.top/ap/api/add-product.php",{
+            uid : uiduid,
+            pid : $(this).attr("data-id"),
+            pnum : Number($("#num").val())
+        }).then(data=>{
+            location.href = "cart.html"
+            console.log(data)		
+
+        })
+        
+    })
